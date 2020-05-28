@@ -8,10 +8,16 @@
 
 `$ react-native link react-native-app-cache-clear`
 
-## Usage
-```javascript
-import AppCacheClear from 'react-native-app-cache-clear';
+## Usage(Android only)
 
-// TODO: What to do with the module?
-AppCacheClear;
+```javascript
+import AppCacheClear from "react-native-app-cache-clear";
+
+// get size and unit
+AppCacheClear.getCacheSize((size, unit) => {
+  console.log(size, unit);
+});
+
+// clear cache
+AppCacheClear.clearCache(() => console.log("clear!"));
 ```
